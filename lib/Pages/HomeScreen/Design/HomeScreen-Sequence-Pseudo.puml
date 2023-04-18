@@ -1,0 +1,42 @@
+@startuml HomeScreen Sequence
+
+skinparam sequence{
+    ParticipantBackgroundColor #A7BEAE
+    LifeLineBackgroundColor #E7E8D1
+    LifeLineBorderColor #2C5F2D
+    ActorBackgroundColor #FC766AFF
+    ActorBorderColor #FC766AFF
+    ArrowColor #B85042
+    ArrowFontColor #234E70
+}
+Actor User
+title increment value
+autonumber
+hide footbox
+User --> HomeScreen: 'Press to change color' button.clicked
+activate User 
+activate HomeScreen
+HomeScreen --> HomeScreenVM: Invokes incrementCount()
+activate HomeScreenVM
+HomeScreenVM --> HomeScreen: Returns
+deactivate HomeScreenVM
+HomeScreen --> User: Display message
+deactivate HomeScreen
+deactivate User 
+
+
+
+newpage decrement value
+autonumber
+hide footbox
+User --> HomeScreen: '-' button.clicked
+activate User 
+activate HomeScreen
+HomeScreen --> HomeScreenVM:Invokes decrementCount()
+activate HomeScreenVM
+HomeScreenVM --> HomeScreen: Returns
+deactivate HomeScreenVM
+HomeScreen --> User: Display message
+deactivate HomeScreen
+deactivate User 
+@enduml 

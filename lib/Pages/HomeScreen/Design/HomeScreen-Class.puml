@@ -1,0 +1,27 @@
+@startuml HomeScreen Class Diagram 
+
+package Pages{
+    package HomeScreen {
+        
+        abstract class HomeScreen{
+            - _homeScreenVM : HomeScreenVM 
+            # initState() : void 
+        }
+        
+        class HomeScreenModel{
+            + counter : int 
+        }
+        
+        class HomeScreenVM{
+            + incrementCounter() : void
+            + decrementCounter() : void 
+        }
+    }
+}
+
+
+HomeScreenVM --> HomeScreenModel : extends
+HomeScreen --> HomeScreenVM: uses
+HomeScreenModel --> UserBO : uses
+
+@enduml

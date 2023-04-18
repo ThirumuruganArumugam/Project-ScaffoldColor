@@ -1,0 +1,40 @@
+@startuml HomeScreenVMVM Sequence
+
+skinparam sequence{
+    ParticipantBackgroundColor #A7BEAE
+    LifeLineBackgroundColor #E7E8D1
+    LifeLineBorderColor #2C5F2D
+    ActorBackgroundColor #FC766AFF
+    ActorBorderColor #FC766AFF
+    ArrowColor #B85042
+    ArrowFontColor #234E70
+}
+
+title increment value
+autonumber
+hide footbox
+Caller --> HomeScreenVM: Invokes incrementCounterValue()
+activate Caller 
+activate HomeScreenVM
+HomeScreenVM --> HomeScreenVM: Increment the counter value
+HomeScreenVM --> Caller: Return the counter value
+deactivate HomeScreenVM
+deactivate Caller 
+
+newpage decrement value
+autonumber
+hide footbox
+Caller --> HomeScreenVM:Invokes decrementCounterValue()
+activate Caller 
+activate HomeScreenVM
+alt#6883BC #FCF6F5 counterValue > 0 
+HomeScreenVM --> HomeScreenVM: Decrement the counter value
+HomeScreenVM --> Caller: Return the counter value
+else  #efbbbb
+HomeScreenVM --> Caller: Return error message
+deactivate HomeScreenVM
+deactivate Caller 
+end
+
+@enduml 
+

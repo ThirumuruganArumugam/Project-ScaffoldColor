@@ -2,12 +2,11 @@ import'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
-part 'Scaffoldmodel.g.dart';
+part 'HomeScreenModel.g.dart';
 
 
-
-class Scaffoldmodel = _ScaffoldmodelBase with _$Scaffoldmodel;
-abstract class _ScaffoldmodelBase with Store {
+class HomeScreenModel = _HomeScreenModelBase with _$HomeScreenModel;
+abstract class _HomeScreenModelBase with Store {
 
   List<Color> colorsCollection = [
     Colors.black,

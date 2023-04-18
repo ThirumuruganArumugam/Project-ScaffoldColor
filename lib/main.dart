@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scaffoldcolor/ScaffoldVM.dart';
-
-import 'scaffoldView.dart';
+import 'Pages/HomeScreen/HomeScreenView.dart';
 
 void main() {
   runApp( MyApp());
@@ -25,7 +23,7 @@ class MyApp extends StatelessWidget{
       ),
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
-      home: Scaffoldcolor(),
+      home: HomeScreen(),
     );
   }
 }

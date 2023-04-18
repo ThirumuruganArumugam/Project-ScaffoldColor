@@ -2,15 +2,16 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
-import 'ScaffoldVM.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_mobx/src/observer.dart';
 
-// ignore: must_be_immutable
-class Scaffoldcolor extends StatelessWidget {
-  Scaffoldcolor({super.key});
+import 'HomeScreenVM.dart';
 
-  final ScaffoldVM _scaffoldVM = ScaffoldVM();
+// ignore: must_be_immutable
+class HomeScreen extends StatelessWidget {
+  HomeScreen({super.key});
+
+  final HomeScreenVM _scaffoldVM = HomeScreenVM();
 
   @override
   Widget build(BuildContext context) {

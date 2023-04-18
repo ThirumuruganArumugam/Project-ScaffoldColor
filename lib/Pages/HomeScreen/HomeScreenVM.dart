@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
-import 'Scaffoldmodel.dart';
+
+import 'HomeScreenModel.dart';
 
 
-class ScaffoldVM extends Scaffoldmodel{
+class HomeScreenVM extends HomeScreenModel{
   
 
   void colorChange(){
@@ -12,10 +13,5 @@ class ScaffoldVM extends Scaffoldmodel{
     var newscolor = colorsCollections[Random().nextInt(colorsCollections.length)];
     setchangeColorInScaffolds(changeColorInScaffolds: newscolor);
   }
-
-  // void iconcolorChange(){
-  //   var newscolor = colorsCollections[Random().nextInt(colorsCollections.length)];
-  //   setchangeColorInScaffolds(changeColorInScaffolds: newscolor);
-  // }
 }
 
