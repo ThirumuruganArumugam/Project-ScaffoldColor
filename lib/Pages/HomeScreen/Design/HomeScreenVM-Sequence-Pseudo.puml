@@ -1,4 +1,4 @@
-@startuml HomeScreenVMVM Sequence
+@startuml HomeScreenVM Sequence
 
 skinparam sequence{
     ParticipantBackgroundColor #A7BEAE
@@ -8,20 +8,23 @@ skinparam sequence{
     ActorBorderColor #FC766AFF
     ArrowColor #B85042
     ArrowFontColor #234E70
+
 }
+skinparam SequenceMessageAlignment center
+
 
 title Change color
 autonumber
 hide footbox
-Caller --> HomeScreenVM: Invokes colorChange()
-activate Caller 
+Caller -> HomeScreenVM: Invokes colorChange()
+activate Caller
 activate HomeScreenVM
-HomeScreenVM --> HomeScreenVM: Changes the scaffold color
+HomeScreenVM -> HomeScreenVM: Changes the scaffold \n color
 HomeScreenVM --> Caller: Return the changed scaffold color
-HomeScreenVM --> HomeScreenVM: Changes the button color
+HomeScreenVM -> HomeScreenVM: Changes the button \n color
 HomeScreenVM --> Caller: Return the changed button color
 deactivate HomeScreenVM
-deactivate Caller 
+deactivate Caller
 
-@enduml 
+@enduml
 

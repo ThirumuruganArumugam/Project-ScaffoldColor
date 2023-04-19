@@ -7,21 +7,25 @@ skinparam sequence{
     ActorBackgroundColor #FC766AFF
     ActorBorderColor #FC766AFF
     ArrowColor #B85042
-    ArrowFontColor #234E70
+    ArrowFontColor #234E70 
+    SequenceMessageAlignment center
 }
+
+
+
 Actor User
 title Color Change
 autonumber
 hide footbox
-User --> HomeScreen: 'Press to change color' button.clicked
-activate User 
+User -> HomeScreen: 'Press to change color' button.clicked
+activate User
 activate HomeScreen
-HomeScreen --> HomeScreenVM: Invokes colorChange()
+HomeScreen -> HomeScreenVM: Invokes colorChange()
 activate HomeScreenVM
 HomeScreenVM --> HomeScreen: Returns
 deactivate HomeScreenVM
 HomeScreen --> User: Display the changed scaffold \n and button color
 deactivate HomeScreen
-deactivate User 
+deactivate User
 
-@enduml 
+@enduml

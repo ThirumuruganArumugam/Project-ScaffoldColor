@@ -9,8 +9,8 @@ package Pages{
 
         class HomeScreenModel{
             + collectionOfColors : List<Color>
-            + changeScreenColor : Color
-            + changeButtonColor : Color
+            + @changeScreenColor : Color
+            + @changeButtonColor : Color
         }
 
         class HomeScreenVM{
