@@ -20,7 +20,7 @@ HomeScreen --> HomeScreenVM: Invokes colorChange()
 activate HomeScreenVM
 HomeScreenVM --> HomeScreen: Returns
 deactivate HomeScreenVM
-HomeScreen --> User: Display changed color
+HomeScreen --> User: Display the changed scaffold \n and button color
 deactivate HomeScreen
 deactivate User 
 

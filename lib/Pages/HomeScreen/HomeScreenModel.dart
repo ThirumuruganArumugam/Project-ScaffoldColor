@@ -24,10 +24,10 @@ abstract class _HomeScreenModelBase with Store {
   @observable
   Color colorChangeInScreen =Colors.purple;
   
-  setchangeColorInScaffold({required Color colorChangeInScreen}) => this.colorChangeInScreen = colorChangeInScreen;
+  setScreen({required Color colorChangeInScreen}) => this.colorChangeInScreen = colorChangeInScreen;
 
   @observable
   Color colorChangeInButton =Colors.yellow;
 
-  setchangeColorInScaffolds({required Color colorChangeInButton}) => this.colorChangeInButton = colorChangeInButton;  
+  setButton({required Color colorChangeInButton}) => this.colorChangeInButton = colorChangeInButton;  
 }

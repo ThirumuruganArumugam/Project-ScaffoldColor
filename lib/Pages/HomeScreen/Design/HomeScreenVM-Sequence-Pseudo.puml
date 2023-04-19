@@ -16,8 +16,10 @@ hide footbox
 Caller --> HomeScreenVM: Invokes colorChange()
 activate Caller 
 activate HomeScreenVM
-HomeScreenVM --> HomeScreenVM: Changes the scaffold \n and button color
-HomeScreenVM --> Caller: Return the \n changed color
+HomeScreenVM --> HomeScreenVM: Changes the scaffold color
+HomeScreenVM --> Caller: Return the changed scaffold color
+HomeScreenVM --> HomeScreenVM: Changes the button color
+HomeScreenVM --> Caller: Return the changed button color
 deactivate HomeScreenVM
 deactivate Caller 
 
