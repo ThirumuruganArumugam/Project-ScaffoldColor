@@ -1,27 +1,25 @@
-@startuml HomeScreen Class Diagram 
+@startuml HomeScreen Class Diagram
 
 package Pages{
     package HomeScreen {
-        
+
         abstract class HomeScreen{
-            - _homeScreenVM : HomeScreenVM 
-            # initState() : void 
+            - _homeScreenVM : HomeScreenVM
         }
-        
+
         class HomeScreenModel{
-            + counter : int 
+            + collectionOfColors : List<Color>
+            + changeScreenColor : Color
+            + changeButtonColor : Color
         }
-        
+
         class HomeScreenVM{
-            + incrementCounter() : void
-            + decrementCounter() : void 
+            + colorChange() : void
         }
     }
 }
 
-
 HomeScreenVM --> HomeScreenModel : extends
-HomeScreen --> HomeScreenVM: uses
-HomeScreenModel --> UserBO : uses
+Pages.HomeScreen.HomeScreen --> HomeScreenVM: uses
 
 @enduml

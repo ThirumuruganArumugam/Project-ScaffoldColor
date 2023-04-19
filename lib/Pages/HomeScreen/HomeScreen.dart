@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
     return Observer(
       builder: (context) {
         return Scaffold(
-            backgroundColor: _scaffoldVM.changeColorInScaffold,
+            backgroundColor: _scaffoldVM.colorChangeInScreen,
             appBar: AppBar(
               title: const Text("Change color"),
             ),
@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: _scaffoldVM.colorChange,
                 style: ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(_scaffoldVM.changeColorInScaffolds),
+                  backgroundColor: MaterialStatePropertyAll(_scaffoldVM.colorChangeInButton),
                 ),
                  
                 child: Text("Press to change color")

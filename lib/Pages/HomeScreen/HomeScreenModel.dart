@@ -8,7 +8,7 @@ part 'HomeScreenModel.g.dart';
 class HomeScreenModel = _HomeScreenModelBase with _$HomeScreenModel;
 abstract class _HomeScreenModelBase with Store {
 
-  List<Color> colorsCollection = [
+  List<Color> collectionOFColors = [
     Colors.black,
     Colors.white,
     Colors.yellow,
@@ -22,34 +22,12 @@ abstract class _HomeScreenModelBase with Store {
   ];
 
   @observable
-  Color changeColorInScaffold =Colors.purple;
- 
-
+  Color colorChangeInScreen =Colors.purple;
   
+  setchangeColorInScaffold({required Color colorChangeInScreen}) => this.colorChangeInScreen = colorChangeInScreen;
 
-  setchangeColorInScaffold({required Color changeColorInScaffold}) => this.changeColorInScaffold = changeColorInScaffold;
-
-
-  List<Color> colorsCollections = [
-    Colors.black,
-    Colors.white,
-    Colors.yellow,
-    Colors.cyan,
-    Colors.blue,
-    Colors.red,
-    Colors.purpleAccent,
-    Colors.lime,
-    Colors.teal,
-    Colors.amber
-  ];
   @observable
-  Color changeColorInScaffolds =Colors.yellow;
-  
+  Color colorChangeInButton =Colors.yellow;
 
-  
-
-  setchangeColorInScaffolds({required Color changeColorInScaffolds}) => this.changeColorInScaffolds = changeColorInScaffolds;
-
-
-  
+  setchangeColorInScaffolds({required Color colorChangeInButton}) => this.colorChangeInButton = colorChangeInButton;  
 }

@@ -10,33 +10,18 @@ skinparam sequence{
     ArrowFontColor #234E70
 }
 Actor User
-title increment value
+title Color Change
 autonumber
 hide footbox
 User --> HomeScreen: 'Press to change color' button.clicked
 activate User 
 activate HomeScreen
-HomeScreen --> HomeScreenVM: Invokes incrementCount()
+HomeScreen --> HomeScreenVM: Invokes colorChange()
 activate HomeScreenVM
 HomeScreenVM --> HomeScreen: Returns
 deactivate HomeScreenVM
-HomeScreen --> User: Display message
+HomeScreen --> User: Display changed color
 deactivate HomeScreen
 deactivate User 
 
-
-
-newpage decrement value
-autonumber
-hide footbox
-User --> HomeScreen: '-' button.clicked
-activate User 
-activate HomeScreen
-HomeScreen --> HomeScreenVM:Invokes decrementCount()
-activate HomeScreenVM
-HomeScreenVM --> HomeScreen: Returns
-deactivate HomeScreenVM
-HomeScreen --> User: Display message
-deactivate HomeScreen
-deactivate User 
 @enduml 

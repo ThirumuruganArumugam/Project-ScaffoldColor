@@ -8,10 +8,11 @@ class HomeScreenVM extends HomeScreenModel{
   
 
   void colorChange(){
-    var newcolor = colorsCollection[Random().nextInt(colorsCollection.length)];
-    setchangeColorInScaffold(changeColorInScaffold: newcolor);
-    var newscolor = colorsCollections[Random().nextInt(colorsCollections.length)];
-    setchangeColorInScaffolds(changeColorInScaffolds: newscolor);
+    var newcolor = collectionOFColors[Random().nextInt(collectionOFColors.length)];
+    setchangeColorInScaffold(colorChangeInScreen: newcolor);
+    
+    var newscolor = collectionOFColors[Random().nextInt(collectionOFColors.length)];
+    setchangeColorInScaffolds(colorChangeInButton: newscolor);
   }
 }
 

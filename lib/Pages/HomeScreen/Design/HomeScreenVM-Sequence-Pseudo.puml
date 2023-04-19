@@ -10,31 +10,16 @@ skinparam sequence{
     ArrowFontColor #234E70
 }
 
-title increment value
+title Change color
 autonumber
 hide footbox
-Caller --> HomeScreenVM: Invokes incrementCounterValue()
+Caller --> HomeScreenVM: Invokes colorChange()
 activate Caller 
 activate HomeScreenVM
-HomeScreenVM --> HomeScreenVM: Increment the counter value
-HomeScreenVM --> Caller: Return the counter value
+HomeScreenVM --> HomeScreenVM: Changes the scaffold \n and button color
+HomeScreenVM --> Caller: Return the \n changed color
 deactivate HomeScreenVM
 deactivate Caller 
-
-newpage decrement value
-autonumber
-hide footbox
-Caller --> HomeScreenVM:Invokes decrementCounterValue()
-activate Caller 
-activate HomeScreenVM
-alt#6883BC #FCF6F5 counterValue > 0 
-HomeScreenVM --> HomeScreenVM: Decrement the counter value
-HomeScreenVM --> Caller: Return the counter value
-else  #efbbbb
-HomeScreenVM --> Caller: Return error message
-deactivate HomeScreenVM
-deactivate Caller 
-end
 
 @enduml 
 
